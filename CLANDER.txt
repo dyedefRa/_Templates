@@ -1,0 +1,73 @@
+
+@{
+    ViewData["Title"] = "Calendar";
+}
+
+
+@{
+    ViewData["Title"] = "PageStocktakingCalendar";
+}
+
+<h2>PageStocktakingCalendar</h2>
+
+
+
+<div class="page-container">
+    <div class="content">
+
+        <!-- External events -->
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h5 class="panel-title">External events</h5>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li><a data-action="collapse"></a></li>
+                        <li><a data-action="reload"></a></li>
+                        <li><a data-action="close"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <p class="content-group">Add extended dragging functionality with <code>droppable</code> option. Data can be attached to the element in order to specify its duration when dropped. A Duration-ish value can be provided. This can either be done via jQuery or via an <code>data-duration</code> attribute. Please note: since droppable option operates with jQuery UI draggables, you must download the appropriate jQuery UI files and initialize a draggable element.</p>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="content-group" id="external-events">
+                            <h6>Draggable Events</h6>
+                            <div class="fc-events-container content-group">
+                                <div class="fc-event" data-color="#546E7A">Sauna and stuff</div>
+                                <div class="fc-event" data-color="#26A69A">Lunch time</div>
+                                <div class="fc-event" data-color="#546E7A">Meeting with Fred</div>
+                                <div class="fc-event" data-color="#FF7043">Shopping</div>
+                                <div class="fc-event" data-color="#5C6BC0">Restaurant</div>
+                                <div class="fc-event">Basketball</div>
+                                <div class="fc-event">Daily routine</div>
+                            </div>
+
+                            <div class="checkbox checkbox-right checkbox-switchery switchery-xs text-center">
+                                <label>
+                                    <input type="checkbox" class="switch" checked="checked" id="drop-remove">
+                                    Remove after drop
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="fullcalendar-external"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ThemeJS {
+    <script src="~/global_assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
+    <script src="~/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="~/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script src="~/global_assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
+    <script src="~/global_assets/js/plugins/ui/fullcalendar/lang/tr.js"></script>
+    <script src="~/global_assets/js/demo_pages/extra_fullcalendar_advanced.js"></script>
+}

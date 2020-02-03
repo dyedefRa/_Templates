@@ -1,0 +1,126 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<head>
+    <style>
+        .ads {
+            font-family: arial;
+        }
+    </style>
+
+</head>
+<body>
+    <table width='615' style=' border: 1px solid #ccc; padding: 30px; font-family:arial;'>
+        <tr>
+            <td width='240'><img src='http://gastroweb.azurewebsites.net/assets/images/fatura_logo.jpg'></td>
+            <td><img src='http://gastroweb.azurewebsites.net/assets/images/fatura_img_1.jpg'></td>
+            <td width='250' align='center' style='font-family: arial;font-size: 20px;font-weight: 600;'>İRSALİYELİ FATURA</td>
+        </tr>
+        <tr>
+            <td colspan='3' height='30'><hr style='height:2px; background:#c1c1c1; border:none;'></td>
+        </tr>
+        <tr>
+            <td colspan='2' valign='top'>
+                <table style='font-family: arial;border: 1px solid #ccc;padding: 8px;margin-right: 20px;font-size: 12px;font-weight: 600;'>
+                    <tr>
+                        <td width='50'>Sayın</td>
+                        <td>{NAMESURNAME}</td>
+                    </tr>
+                    <tr>
+                        <td height='6px'></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            {ADDRESS}
+                            {COUNTY}/{CITY}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height='10px'></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2' style='background: #c5c5c5;height: 25px;line-height: 25px;text-indent: 10px;'>Müş V.D. No:</td>
+                    </tr>
+                </table>
+            </td>
+            <td style='font-family: arial;font-size: 12px;font-weight: 600;color: #333;'>
+                <p>
+                    Barbaros Mah. Halk Cad.
+                    No: 47/2 Ataşehir - İst <br>
+                    Tel: (0553) 314 00 40 <br>
+                    Kozyatağı V.D.:389 072 9631 <br>
+                    Tic. Sic. No:873111
+                </p>
+
+                <span style='float: left;margin: 8px 0px;width: 200px;'><span style='width: 120px;float: left;'>Sıra No </span>&nbsp; <span style='color: #f00;'></span></span> <br>
+                <span style='width: 100%;float: left;'><span style='width: 120px;float: left;'>Düzenleme Tarihi </span>: {DATE}</span> <br>
+                <span style='width: 100%;float: left;'><span style='width: 120px;float: left;'>Düzenleme Saati </span>: {TIME}</span> <br>
+                <span style='width: 100%;float: left;'><span style='width: 120px;float: left;'>Fiili Sevk Tarihi </span>: </span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3' height='30px'></td>
+        </tr>
+        <tr>
+            <td colspan='3'>
+                <table width='100%' style='border: 1px solid #ccc;padding: 8px;font-size: 12px;font-weight: 600;'>
+                    <tr>
+                        <td style='font-weight: bold; height: 30px; line-height: 30px; background: #c5c5c5; text-align: center;' width='75%'>AÇIKLAMALAR</td>
+                        <td style='font-weight: bold; height: 30px; line-height: 30px; background: #c5c5c5; text-align: center;' width='25%'>TUTAR</td>
+                    </tr>
+
+                    <tr>
+                        <td valign='top' style='padding-top: 15px;padding-left: 20px;'>GASTROCLUB ÜYELİĞİ</td>
+                        <td height='250px' valign='top' style='background: #c5c5c5;text-align: center;padding-top: 15px;line-height: 22px;'>{ORDERTOTAL}</td>
+                    </tr>
+                    <tr>
+                        <td colspan='2' height='4px'><hr style='height:2px; background:#c1c1c1; border:none;'></td>
+                    </tr>
+                    <tr>
+                        <td valign='top' style='text-align: right; padding: 0 10px 0 0; line-height: 22px; font-weight: bold;'>TOPLAM</td>
+                        <td height='22px' valign='top' style='background: #c5c5c5; text-align: center;  line-height: 22px;'> {ORDERPRICE} </td>
+                    </tr>
+                         {SHIPMENT}
+                    <tr>
+                        <td valign='top' style='text-align: right; padding: 0 10px 0 0; line-height: 22px; font-weight: bold;'>KDV</td>
+                        <td height='22px' valign='top' style='background: #c5c5c5; text-align: center;  line-height: 22px;'> {VAT} </td>
+                    </tr>
+                    <tr>
+                        <td valign='top' style='text-align: right; padding: 0 10px 0 0; line-height: 22px; font-weight: bold;'>GENEL TOPLAM</td>
+                        <td height='22px' valign='top' style='background: #c5c5c5; text-align: center;  line-height: 22px;'> {ORDERTOTAL} </td>
+                    </tr>
+
+
+
+
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3'>
+                <table style='margin-top: 6px; border: 1px solid #ccc; padding: 8px; font-size: 13px; font-weight: 600; border-bottom: 7px solid #ccc;' width='100%'>
+                    <tr>
+                        <td width='80'><b>TUTAR</b></td>
+                        <td>YALNIZ {PRICETEXT}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3'>
+                <table width='100%' style='margin-top: 6px;padding: 8px;font-size: 10px;font-weight: 600;'>
+                    <tr>
+                        <td width='350'><b>{BANKNAME}</b><br>{BANKBRANCH} {ACCOUNTNO} {IBAN}</td>
+                        <td valign='top'><b>TESLİM ALAN</b></td>
+                        <td valign='top'><b>TESLİM EDEN</b></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
